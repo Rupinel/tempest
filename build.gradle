@@ -10,18 +10,21 @@ buildscript {
 	}
 }
 
-apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-group = 'kr.howmuch'
-version = '0.0.1-SNAPSHOT'
+jar {
+	baseName = 'tempest'
+	version = '1.0.0'
+	from('src/main/resources/ebextensions') { into('.ebextensions') }
+}
+
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-
 }
 
 dependencies {

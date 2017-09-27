@@ -1,0 +1,1 @@
+web: java -jar tempest-1.0.4.jar -Xmms:256m
